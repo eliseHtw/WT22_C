@@ -21,6 +21,12 @@ nav a {
     border-radius: 5px;
 }
 
+h3 {
+    width: 80%;
+    margin:  auto;
+    padding-bottom: 15px;
+}
+
 a:link { 
     text-decoration: none; 
 }
@@ -40,8 +46,10 @@ a:active {
 }
 
 table {
-    box-shadow: 3px 3px 0 0 grey;
+    box-shadow: 4px 4px 0 0 grey;
     width: 80%;
+    margin: 0 auto;
+    z-index: 999;
 }
 
 table {
@@ -73,4 +81,5 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: smaller;
+    z-index: 1;
 }
