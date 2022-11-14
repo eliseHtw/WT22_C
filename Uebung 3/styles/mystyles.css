@@ -1,0 +1,30 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: green;
+    color: #FF5F00;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+}
+
+.berlin {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 2%;
+    margin: 0;
+    box-shadow: -5px -5px 5px #ccc, 5px 5px 5px #ccc;
+}
+
+img {
+    width: 60%;
+    height: auto;
+}
