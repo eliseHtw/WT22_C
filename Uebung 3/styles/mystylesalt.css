@@ -8,7 +8,7 @@ header {
     text-align: center;
 }
 
-.citygrid {
+.wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
@@ -16,12 +16,12 @@ header {
     text-align: center;
 }
 
-.citycard {
-    display: grid;
-    grid-template-rows: 72% ;
-    padding: 4%;
+.berlin {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 2%;
     margin: 0;
-    box-shadow: 0 0 5px 0 #ccc, 5px 5px 5px #ccc;
+    box-shadow: -5px -5px 5px #ccc, 5px 5px 5px #ccc;
 }
 
 img {
