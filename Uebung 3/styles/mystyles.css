@@ -19,7 +19,7 @@ header {
 
 .citycard {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     padding: 5%;
     margin: 0;
     box-shadow: 0 0 5px 0 #ccc, 5px 5px 5px #ccc;
@@ -27,11 +27,11 @@ header {
 
 .cityimage {
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
 }
 
 .cityname {
-    grid-row: 4;
+    grid-row: 3;
 }
 
 img {

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Uebung 4</title>
+</head>
+
+<body>
+    <div class="container">
+        <p> </p>
+        <h1>Teilnehmerin Registrierung</h1>
+        <form class="row g-3">
+            <div class="col-md-6 mt-3">
+                <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                <div id="firstNameFeedback" class="invalid-feedback">Bitte Vornamen eingeben!</div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                <div id="lastNamefeedback" class="invalid-feedback">Bitte Nachnamen eingeben!</div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <input type="text" class="form-control" id="eMail" placeholder="E-Mail" required>
+                <div id="eMailFeedback" class="invalid-feedback">Bitte E-Mail eingeben!</div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <input type="text" class="form-control" id="ipAddress" placeholder="IP-Address" required>
+                <div id="ipAddressFeedback" class="invalid-feedback">Bitte IP-Adresse eingeben!</div>
+            </div>
+            <div class="col-md-3">
+                <button type="reset" onclick="reset()" class="btn btn-secondary">Abbrechen</button>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" onclick="register(event)" class="btn btn-success">Registrieren</button>
+            </div>
+            <h3 class="text-danger" id="spiegeloben"></h3>
+            <p id="spiegel"></p>
+            <input id="input" placeholder="neues Item" onchange="addItem(this)" />
+            <ul id="ul1">
+                <li>erstes</li>
+                <li>zweites</li>
+            </ul>
+            <script>
+                function register(event) {
+
+                    let werte = "Eingegebene Werte";
+                    let fname = document.querySelector('#firstName').value;
+                    let lname = document.querySelector('#lastName').value;
+                    let email = document.querySelector('#eMail').value;
+                    let ipadr = document.querySelector('#ipAddress').value;
+
+                    document.getElementById("spiegeloben").innerHTML = werte;
+                    document.getElementById("spiegel").innerHTML = fname;
+
+                    console.log(fname);
+                    console.log(lname);
+                    console.log(email);
+                    console.log(ipadr);
+
+                    event.preventDefault();
+                }
+
+                function addItem(inputEl) {
+                    let text = inputEl.value;
+                    inputEl.value = "";
+                    let textNode = document.createTextNode(text);
+                    let liNode = document.createElement('li');
+                    liNode.appendChild(textNode);
+                    let ulNode = document.getElementById('ul1');
+                    ulNode.appendChild(liNode);
+                }
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>
